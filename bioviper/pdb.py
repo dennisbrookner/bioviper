@@ -139,7 +139,7 @@ class ProteinStructure:
         elif isinstance(index, slice):
             return ProteinStructure(residues[index], name=self.name,
                     annotation_type=self._annotation_type, annotate_by=self._annotate_by,
-                    resolution=self.resolution))
+                    resolution=self.resolution)
 
         elif isinstance(index, (list, np.ndarray)):
             return ProteinStructure([self.residues[k] for k in index], name=self.name,
